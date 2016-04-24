@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "mongoose": "^4.0.3"
+  },
+  "devDependencies": {
+    "mongodb": "^2.0",
+    "gulp": "3.8.11"
+  }
+}
