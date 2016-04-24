@@ -9,11 +9,8 @@ var mongoose = require('mongoose');
 var mongoUri = "mongodb://localhost:27017/student";
 mongoose.connect(mongoUri);
 mongoose.connection.once('open', function () {
-  console.log("All hail mon-god");
+  console.log("MONGO!!!");
 });
-
-// app.set('port', process.env.PORT || 3000);
-// app.set('views', __dirname + '/views');
 
 /*
 These are the fields (star means required) ...
@@ -143,6 +140,6 @@ router.route("/students/:id")
 app.use('/', router);
 
 app.listen(3000);
-console.log("no-demon sees everything");
+console.log("Systems on line");
 
 module.exports = Schema;
