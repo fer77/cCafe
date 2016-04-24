@@ -95,17 +95,12 @@ router.route("/students/:id")
             if(err) {
                 response = {"error": true, "message": "Error fetching data"};
             } else {
-            // we got data from Mongo.
-            // change it accordingly.
+            // got data from Mongo.
                 if(req.body.userEmail !== undefined) {
-                    // case where email needs to be updated.
+            // case where email needs to be updated.
                     data.userEmail = req.body.userEmail;
                 }
-                if(req.body.userPassword !== undefined) {
-                    // case where password needs to be updated
-                    data.userPassword = req.body.userPassword;
-                }
-                // save the data
+            // save the data
                 data.save(function(err){
                     if(err) {
                         response = {"error": true, "message": "Error updating data"};
@@ -124,7 +119,7 @@ router.route("/students/:id")
             if(err) {
                 response = {"error": true, "message": "Error fetching data"};
             } else {
-                // data exists, remove it.
+                // if data exists, remove it.
                 student.remove({_id : req.params.id}, function(err){
                     if(err) {
                         response = {"error": true, "message": "Error deleting data"};
